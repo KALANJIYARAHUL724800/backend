@@ -5,6 +5,8 @@ import com.example.portfolio_backend.repository.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ContactService {
     @Autowired
@@ -16,5 +18,9 @@ public class ContactService {
         contact.setEmail(data.getEmail());
         contact.setMessage(data.getMessage());
         return contactRepository.save(contact);
+    }
+    public List<Contact> getAllContactDetails()
+    {
+        return contactRepository.findAll();
     }
 }
