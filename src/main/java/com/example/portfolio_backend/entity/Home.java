@@ -12,17 +12,14 @@ import java.time.LocalDateTime;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @Entity
-@Table(name = "home")
+@Table(name = "portfolio_data")
 public class Home {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "pages")
-    private String pages;
     @Lob
-    @Column(columnDefinition = "TEXT")
+    @Column(name = "content", columnDefinition = "LONGTEXT")
     private String contents;
     @CreationTimestamp()
     @Column(updatable = false)

@@ -15,7 +15,6 @@ public class HomeService {
     public Home insertHomeDetails(HomeDto data)
     {
         Home homedata = new Home();
-        homedata.setPages(data.getPages());
         homedata.setContents(data.getContents());
         return homeRepository.save(homedata);
     }
