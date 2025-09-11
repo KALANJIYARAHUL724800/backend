@@ -1,7 +1,6 @@
 package com.example.portfolio_backend.controller;
 
 import com.example.portfolio_backend.dto.AdminDto;
-import com.example.portfolio_backend.entity.Admin;
 import com.example.portfolio_backend.security.JwtUtil;
 import com.example.portfolio_backend.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.Map;
 
-@CrossOrigin("*")
 @RestController
 @RequestMapping("/api/admin")
 public class AdminController {
