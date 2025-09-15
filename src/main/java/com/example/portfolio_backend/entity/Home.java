@@ -19,7 +19,7 @@ public class Home {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Lob
-    @Column(name = "content", columnDefinition = "LONGTEXT")
+    @Column(name = "content", columnDefinition = "TEXT")
     private String contents;
     @CreationTimestamp()
     @Column(updatable = false)
